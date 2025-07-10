@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanye West College Trilogy Game</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/retro.css">
+</head>
+<body>
+  <div id="game-container">
+    <header>
+      <h1>Kanye West College Trilogy</h1>
+      <nav>
+        <button id="act1-btn">College Dropout</button>
+        <button id="act2-btn">Late Registration</button>
+        <button id="act3-btn">Graduation</button>
+      </nav>
+    </header>
+    <main id="game-main">
+      <!-- Dynamischer Game-Content -->
+    </main>
+    <footer>
+      <div id="audio-controls">
+        <button id="mute-btn">🔊</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+      </div>
+      <span id="copyright">&copy; 2024 College Trilogy Fan Game</span>
+    </footer>
+  </div>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/audio.js"></script>
+  <script src="scripts/ui.js"></script>
+</body>
+</html>

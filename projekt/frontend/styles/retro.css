@@ -1,0 +1,60 @@
+/* Retro-2000er-Ästhetik */
+
+body, #game-container {
+  cursor: url('../assets/images/retro-cursor.png'), auto;
+}
+
+nav button, #mute-btn {
+  border: 2px outset #ffe6b3;
+  background: linear-gradient(180deg, #fffbe6 0%, #ffe6b3 100%);
+  box-shadow: 0 2px 0 #bfa76f, 0 0 8px #ffb347;
+  text-shadow: 1px 1px 0 #fffbe6;
+}
+
+nav button:active, #mute-btn:active {
+  border: 2px inset #bfa76f;
+}
+
+#game-container {
+  border: 4px double #ffb347;
+  image-rendering: pixelated;
+}
+
+header h1 {
+  font-family: 'Verdana', 'Geneva', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 2px #ffb347);
+}
+
+#game-main {
+  background: repeating-linear-gradient(135deg, #ffe6b3, #ffe6b3 10px, #fffbe6 10px, #fffbe6 20px);
+  border: 2px solid #ffb347;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #ffb347;
+  padding: 12px;
+}
+
+#mute-btn {
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
+  border-radius: 6px;
+  box-shadow: 1px 1px 0 #e6c98a;
+}
+
+#volume-slider {
+  accent-color: #ffb347;
+}
+
+/* Glitch Effekt */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #ff00c8, -2px 0 #00fff9; }
+  20% { text-shadow: -2px 0 #ff00c8, 2px 0 #00fff9; }
+  40% { text-shadow: 2px 2px #ff00c8, -2px -2px #00fff9; }
+  60% { text-shadow: -2px -2px #ff00c8, 2px 2px #00fff9; }
+  80% { text-shadow: 2px 0 #ff00c8, -2px 0 #00fff9; }
+  100% { text-shadow: none; }
+}
+.glitch {
+  animation: glitch 1s infinite linear alternate;
+}
