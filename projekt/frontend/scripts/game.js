@@ -48,6 +48,24 @@ function startAct(actId) {
   main.innerHTML = `<div class="glitch"><h3>Act ${actId} Gameplay kommt bald!</h3></div>`;
 }
 
+async function fetchUser(userId) {
+  const res = await fetch('URL_ZUM_GAS_API?path=getUser&userId=' + encodeURIComponent(userId));
+  return res.json();
+}
+
+async function saveUserProgress(userId, progress) {
+  const res = await fetch('URL_ZUM_GAS_API?path=saveProgress', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, progress })
+  });
+  return res.json();
+}
+
+// Beispiel-Aufruf:
+// fetchUser('testuser').then(data => console.log(data));
+// saveUserProgress('testuser', { act: 1, choice: 'music' }).then(data => console.log(data));
+
 document.getElementById('act1-btn').onclick = () => showAct(1);
 document.getElementById('act2-btn').onclick = () => showAct(2);
 document.getElementById('act3-btn').onclick = () => showAct(3);
