@@ -3,12 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horst Wilkens – Tierwelt der Kanarischen Inseln</title>
-  <meta name="description" content="Eine Reise durch die einzigartige Fauna der Kanarischen Inseln – von endemischen Rieseneidechsen über den Kanarienvogel bis zu Walen und Delfinen im Atlantik. Zusammengestellt von Horst Wilkens." />
+
+  <!-- Primäres SEO -->
+  <title>Tierwelt der Kanarischen Inseln | Horst Wilkens</title>
+  <meta name="description" content="Eine zoologische Entdeckungsreise durch die einzigartige Fauna der Kanarischen Inseln: endemische Rieseneidechsen (Gallotia), der Kanarengirlitz, Wale und Delfine im Atlantik sowie ausgestorbene Inselriesen. Recherchiert und kommentiert von Horst Wilkens." />
+  <meta name="keywords" content="Kanarische Inseln, Tierwelt, Fauna, endemische Arten, Gallotia, Rieseneidechse, Kanarengirlitz, Serinus canaria, Wale, Delfine, Grindwal, Teneriffa, Gran Canaria, Naturschutz, Horst Wilkens" />
+  <meta name="author" content="Horst Wilkens" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#163a4f" />
+  <link rel="canonical" href="https://horst-wilkens.example/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Tierwelt der Kanarischen Inseln" />
+  <meta property="og:title" content="Tierwelt der Kanarischen Inseln | Horst Wilkens" />
+  <meta property="og:description" content="Endemische Rieseneidechsen, der Kanarengirlitz, Wale und Delfine im Atlantik – eine zoologische Reise durch das Inselleben der Kanaren." />
+  <meta property="og:url" content="https://horst-wilkens.example/" />
+  <meta property="og:image" content="https://horst-wilkens.example/og-image.jpg" />
+  <meta property="og:image:alt" content="Vulkanische Kanareninsel im Atlantik mit ihrer Tierwelt" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tierwelt der Kanarischen Inseln | Horst Wilkens" />
+  <meta name="twitter:description" content="Endemische Eidechsen, der Kanarengirlitz, Wale und Delfine – die einzigartige Fauna der Kanaren." />
+  <meta name="twitter:image" content="https://horst-wilkens.example/og-image.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Strukturierte Daten (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tierwelt der Kanarischen Inseln",
+    "url": "https://horst-wilkens.example/",
+    "inLanguage": "de",
+    "description": "Eine zoologische Entdeckungsreise durch die Fauna der Kanarischen Inseln.",
+    "author": {
+      "@type": "Person",
+      "name": "Horst Wilkens"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Tierwelt der Kanarischen Inseln" },
+      { "@type": "Thing", "name": "Endemische Arten" },
+      { "@type": "Thing", "name": "Wale und Delfine" }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="hero" id="top">
@@ -26,6 +71,12 @@
         <li><a href="#schutz">Naturschutz</a></li>
       </ul>
     </nav>
+
+    <div class="hero__layers" aria-hidden="true">
+      <span class="hero__layer hero__layer--1" data-depth="40"></span>
+      <span class="hero__layer hero__layer--2" data-depth="70"></span>
+      <span class="hero__layer hero__layer--3" data-depth="25"></span>
+    </div>
 
     <div class="hero__inner">
       <p class="hero__eyebrow">Eine zoologische Entdeckungsreise</p>

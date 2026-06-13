@@ -71,3 +71,55 @@ if ("IntersectionObserver" in window) {
   );
   counters.forEach((el) => statObserver.observe(el));
 }
+
+/* ---------- 3D-Effekte ---------- */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+if (!reduceMotion && finePointer) {
+  // Maus-gesteuerter 3D-Tilt der Karten
+  const MAX_TILT = 9; // Grad
+  const tiltCards = document.querySelectorAll(
+    ".island-card, .bird-card, .ocean-card, .extinct-card, .species"
+  );
+
+  tiltCards.forEach((card) => {
+    card.addEventListener("pointermove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      const rotY = (px - 0.5) * 2 * MAX_TILT;
+      const rotX = (0.5 - py) * 2 * MAX_TILT;
+      card.classList.add("tilt--active");
+      card.style.transform =
+        `rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+      card.style.setProperty("--mx", `${px * 100}%`);
+      card.style.setProperty("--my", `${py * 100}%`);
+    });
+
+    const reset = () => {
+      card.classList.remove("tilt--active");
+      card.style.transform = "";
+    };
+    card.addEventListener("pointerleave", reset);
+    card.addEventListener("blur", reset, true);
+  });
+
+  // Parallax der Hero-Ebenen anhand der Mausposition
+  const layers = document.querySelectorAll(".hero__layer");
+  const hero = document.querySelector(".hero");
+  if (hero && layers.length) {
+    hero.addEventListener("pointermove", (e) => {
+      const cx = (e.clientX / window.innerWidth - 0.5) * 2;
+      const cy = (e.clientY / window.innerHeight - 0.5) * 2;
+      layers.forEach((layer) => {
+        const depth = parseFloat(layer.dataset.depth || "30");
+        layer.style.transform =
+          `translate3d(${-cx * depth}px, ${-cy * depth}px, 0)`;
+      });
+    });
+    hero.addEventListener("pointerleave", () => {
+      layers.forEach((layer) => (layer.style.transform = ""));
+    });
+  }
+}

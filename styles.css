@@ -358,6 +358,81 @@ h1, h2, h3, .hero__brand { font-family: "Fraunces", Georgia, serif; }
 }
 .footer__top:hover { text-decoration: underline; }
 
+/* ---------- 3D-EFFEKTE ---------- */
+/* Perspektive auf die Karten-Container, damit Kind-Karten räumlich kippen */
+.card-grid,
+.species-list,
+.ocean-grid,
+.extinct-row {
+  perspective: 1100px;
+}
+
+/* Karten, die per JS in 3D gekippt werden */
+.island-card,
+.bird-card,
+.ocean-card,
+.extinct-card,
+.species {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s;
+}
+.tilt--active {
+  transition: transform 0.08s linear;
+}
+
+/* Inhalte heben sich beim Kippen leicht aus der Karte heraus */
+.island-card h3, .bird-card h3, .ocean-card h3, .extinct-card h3, .species h3 {
+  transform: translateZ(28px);
+}
+.bird-card__emoji, .species__icon {
+  transform: translateZ(45px);
+}
+.island-card p, .bird-card p, .ocean-card p, .extinct-card p, .species p {
+  transform: translateZ(14px);
+}
+
+/* Glanzlicht, das der Maus folgt */
+.island-card, .bird-card, .ocean-card, .extinct-card, .species { position: relative; }
+.island-card::after, .bird-card::after, .ocean-card::after,
+.extinct-card::after, .species::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.35),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  mix-blend-mode: soft-light;
+}
+.tilt--active::after { opacity: 1; }
+
+/* 3D-Parallax im Hero */
+.hero { perspective: 900px; }
+.hero__layers {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.hero__layer {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.5;
+  transition: transform 0.2s ease-out;
+}
+.hero__layer--1 { width: 320px; height: 320px; top: 12%; left: 8%;  background: radial-gradient(circle, rgba(216,162,58,0.5), transparent 70%); }
+.hero__layer--2 { width: 420px; height: 420px; bottom: 6%; right: 6%; background: radial-gradient(circle, rgba(63,107,74,0.55), transparent 70%); }
+.hero__layer--3 { width: 200px; height: 200px; top: 40%; right: 28%; background: radial-gradient(circle, rgba(47,111,126,0.6), transparent 70%); }
+.hero__inner { transform-style: preserve-3d; }
+
 /* ---------- REVEAL ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }

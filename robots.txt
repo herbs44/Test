@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://horst-wilkens.example/sitemap.xml
