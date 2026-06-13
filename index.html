@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horst Wilkens – Tierwelt der Kanarischen Inseln</title>
+  <meta name="description" content="Eine Reise durch die einzigartige Fauna der Kanarischen Inseln – von endemischen Rieseneidechsen über den Kanarienvogel bis zu Walen und Delfinen im Atlantik. Zusammengestellt von Horst Wilkens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav">
+      <a class="nav__brand" href="#top">Horst&nbsp;Wilkens</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="#inseln">Die Inseln</a></li>
+        <li><a href="#reptilien">Reptilien</a></li>
+        <li><a href="#voegel">Vögel</a></li>
+        <li><a href="#meer">Meerestiere</a></li>
+        <li><a href="#ausgestorben">Ausgestorben</a></li>
+        <li><a href="#schutz">Naturschutz</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Eine zoologische Entdeckungsreise</p>
+      <h1 class="hero__title">Die Tierwelt der<br />Kanarischen Inseln</h1>
+      <p class="hero__lead">
+        Ein vulkanisches Archipel im Atlantik, geformt von Feuer und Isolation –
+        und genau deshalb die Heimat von rund 3.600 Arten, die es nirgendwo
+        sonst auf der Welt gibt. Begleiten Sie mich auf einer Reise durch
+        Lorbeerwälder, Lavafelder und tiefblaues Meer.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#inseln">Reise beginnen</a>
+        <a class="btn btn--ghost" href="#meer">Wale &amp; Delfine</a>
+      </div>
+      <p class="hero__by">Zusammengestellt und kommentiert von <strong>Horst Wilkens</strong></p>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">↓ scrollen</div>
+  </header>
+
+  <main>
+    <!-- FAKTEN -->
+    <section class="stats" aria-label="Zahlen und Fakten">
+      <div class="stats__item">
+        <span class="stats__num" data-count="12000">12.000+</span>
+        <span class="stats__label">Landlebewesen</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num" data-count="3600">3.600</span>
+        <span class="stats__label">endemische Arten</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num" data-count="8">8</span>
+        <span class="stats__label">Hauptinseln</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num" data-count="28">28</span>
+        <span class="stats__label">Wal- &amp; Delfinarten</span>
+      </div>
+    </section>
+
+    <!-- DIE INSELN -->
+    <section class="section" id="inseln">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel I</span>
+        <h2>Ein Labor der Evolution</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Die Kanarischen Inseln sind nie mit dem Festland verbunden gewesen.
+          Sie stiegen als vulkanische Kegel aus dem Atlantik empor, und jede Art,
+          die hier lebt, musste das offene Meer überwinden, um sie zu erreichen –
+          getragen von Wind, Strömung oder Treibgut. Wer einmal angekommen war,
+          entwickelte sich in der Isolation oft zu etwas völlig Neuem.
+        </p>
+        <p>
+          Das Ergebnis ist eine der spektakulärsten Inselfaunen der Erde: über
+          12.000 Landtierarten und rund 4.500 Meerestiere, von denen etwa 3.600
+          ausschließlich auf den Kanaren vorkommen. Die starke Höhenstaffelung –
+          von der Küste bis auf 3.715 Meter zum Gipfel des Teide – schafft dabei
+          Lebensräume von der Halbwüste bis zum nebelfeuchten Lorbeerwald.
+        </p>
+      </div>
+      <div class="card-grid">
+        <article class="island-card">
+          <h3>Lorbeerwald (Laurisilva)</h3>
+          <p>Ein Relikt der Tertiärzeit, das in Europa längst verschwunden ist. Nebelfeuchte Wälder auf La Gomera, Teneriffa und La Palma beherbergen Tauben und Insekten, die es nur hier gibt.</p>
+        </article>
+        <article class="island-card">
+          <h3>Vulkanische Halbwüste</h3>
+          <p>Auf Lanzarote und Fuerteventura herrscht karge Lavalandschaft. Genau hier fühlen sich Eidechsen, Skinke und die seltene Kragentrappe besonders wohl.</p>
+        </article>
+        <article class="island-card">
+          <h3>Der Atlantik</h3>
+          <p>Der kühle Kanarenstrom und Auftriebswasser von der afrikanischen Küste machen die Gewässer zu einem der artenreichsten Wal-Reviere der Welt.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- REPTILIEN -->
+    <section class="section section--alt" id="reptilien">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel II</span>
+        <h2>Reptilien – die Herrscher der Lava</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Die Tierwelt der Kanaren wird vor allem von Reptilien und Vögeln geprägt.
+          Im Zentrum steht die Eidechsengattung <em>Gallotia</em>, die ausschließlich
+          auf diesem Archipel vorkommt. Acht Arten haben sich auf die einzelnen
+          Inseln aufgeteilt – ein Lehrbuchbeispiel für Inselevolution. Manche von
+          ihnen erreichen erstaunliche Größen von bis zu 80 Zentimetern.
+        </p>
+      </div>
+      <ul class="species-list">
+        <li class="species">
+          <div class="species__icon">🦎</div>
+          <div>
+            <h3>Gran-Canaria-Rieseneidechse</h3>
+            <p><em>Gallotia stehlini</em> – mit bis zu 80 cm Gesamtlänge die größte lebende Art der Gattung. Ein imposanter, kräftiger Pflanzen- und Insektenfresser.</p>
+          </div>
+        </li>
+        <li class="species">
+          <div class="species__icon">🦎</div>
+          <div>
+            <h3>El-Hierro-Rieseneidechse</h3>
+            <p><em>Gallotia simonyi</em> – etwas kleiner (bis 60 cm) und stark vom Aussterben bedroht. Nur durch intensive Zuchtprogramme noch zu retten.</p>
+          </div>
+        </li>
+        <li class="species">
+          <div class="species__icon">🦎</div>
+          <div>
+            <h3>Kanareneidechse</h3>
+            <p><em>Gallotia galloti</em> – die häufige, allgegenwärtige Art auf Teneriffa und La Palma. Männchen tragen leuchtend blaue Kehlflecken.</p>
+          </div>
+        </li>
+        <li class="species">
+          <div class="species__icon">🦎</div>
+          <div>
+            <h3>Kanaren-Skink &amp; Mauergecko</h3>
+            <p>Der Gran-Canaria-Skink und Boettgers Kanaren-Mauergecko ergänzen die endemische Reptilienfauna in Spalten und unter Steinen.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- VÖGEL -->
+    <section class="section" id="voegel">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel III</span>
+        <h2>Vögel – und der Star, der den Inseln den Namen gab</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Vögel bilden die vielfältigste Gruppe der kanarischen Fauna – rund 48
+          Brutvogelarten, darunter mehrere Endemiten. Das unbestrittene Wahrzeichen
+          ist der <strong>Kanarengirlitz</strong> (<em>Serinus canaria</em>), der
+          wilde Vorfahr des Hauskanarienvogels. Anders als oft vermutet, ist nicht
+          der Vogel nach den Inseln benannt – die Inseln tragen ihren Namen nach
+          den Hunden (<em>lat. canis</em>), die antike Seefahrer hier vorfanden.
+        </p>
+      </div>
+      <div class="card-grid">
+        <article class="bird-card">
+          <span class="bird-card__emoji">🐦</span>
+          <h3>Kanarengirlitz</h3>
+          <p><em>Serinus canaria.</em> Der unscheinbare graugrüne Wildvogel, dessen Gesang ihn weltberühmt machte.</p>
+        </article>
+        <article class="bird-card">
+          <span class="bird-card__emoji">🕊️</span>
+          <h3>Lorbeer- &amp; Bolle-Taube</h3>
+          <p>Zwei Taubenarten (<em>turqué</em> und <em>rabiche</em>), die ausschließlich in den Lorbeerwäldern leben.</p>
+        </article>
+        <article class="bird-card">
+          <span class="bird-card__emoji">💙</span>
+          <h3>Teneriffa-Blaufink</h3>
+          <p>Ein stahlblauer Fink der Kiefernwälder – das gefiederte Symbol der Insel Teneriffa.</p>
+        </article>
+        <article class="bird-card">
+          <span class="bird-card__emoji">🪶</span>
+          <h3>Kanaren-Schwarzkehlchen</h3>
+          <p>Endemisch auf Fuerteventura, eine der seltensten Singvogelarten Europas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MEER -->
+    <section class="section section--ocean" id="meer">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel IV</span>
+        <h2>Wale &amp; Delfine im Atlantik</h2>
+      </div>
+      <div class="prose prose--light">
+        <p>
+          Vor den Küsten der Kanaren – besonders in der Meerenge zwischen
+          Teneriffa und La Gomera – leben rund 28 Wal- und Delfinarten. Damit
+          beherbergt allein Teneriffa etwa ein Viertel der weltweiten
+          Cetaceen-Vielfalt. Es ist einer der besten Orte der Erde, um diesen
+          Tieren ganzjährig zu begegnen.
+        </p>
+      </div>
+      <div class="ocean-grid">
+        <article class="ocean-card">
+          <h3>Grindwal</h3>
+          <p class="ocean-card__meta">Ganzjährig · Standwal</p>
+          <p>Der Kurzflossen-Grindwal lebt das ganze Jahr in stabilen Familienverbänden zwischen den Inseln – auf 99 % aller Beobachtungsfahrten zu sehen.</p>
+        </article>
+        <article class="ocean-card">
+          <h3>Große Tümmler</h3>
+          <p class="ocean-card__meta">Ganzjährig · Delfin</p>
+          <p>Die wohl bekannteste Delfinart, neugierig und gesellig. Auf über 70 % der Touren begegnet man ihr.</p>
+        </article>
+        <article class="ocean-card">
+          <h3>Finn- &amp; Buckelwale</h3>
+          <p class="ocean-card__meta">November–April · Wanderer</p>
+          <p>Auf ihren Wanderungen ziehen im Winter und Frühjahr auch riesige Bartenwale an den Inseln vorbei.</p>
+        </article>
+        <article class="ocean-card">
+          <h3>Pottwal</h3>
+          <p class="ocean-card__meta">Tieftaucher</p>
+          <p>Bis zu 20 Meter lang. Selbst Blauwale und Orcas wurden in den kanarischen Gewässern schon gesichtet.</p>
+        </article>
+      </div>
+      <p class="ocean-note">
+        🐢 Auch Meeresschildkröten, Rochen, Schwertfische, Thunfische und farbenfrohe
+        Papageifische gehören zur reichen Unterwasserwelt des Archipels.
+      </p>
+    </section>
+
+    <!-- AUSGESTORBEN -->
+    <section class="section" id="ausgestorben">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel V</span>
+        <h2>Die verlorenen Riesen</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Inseln bringen oft Giganten hervor – und sind zugleich besonders
+          verletzlich. Mit der Ankunft des Menschen verschwanden mehrere
+          beeindruckende Arten für immer. Sie erinnern daran, wie schnell
+          einzigartige Inselwelten kippen können.
+        </p>
+      </div>
+      <div class="extinct-row">
+        <div class="extinct-card">
+          <h3>Goliath-Rieseneidechse</h3>
+          <p><em>Gallotia goliath</em> – eine ausgestorbene Eidechse, deutlich größer als alle heute lebenden Arten.</p>
+        </div>
+        <div class="extinct-card">
+          <h3>Kanaren-Riesenratte</h3>
+          <p><em>Canariomys bravoi</em> – eine katzengroße Nagerart, die einst die Wälder Teneriffas bewohnte.</p>
+        </div>
+        <div class="extinct-card">
+          <h3>Riesenschildkröte</h3>
+          <p><em>Geochelone burchardi</em> – eine landlebende Riesenschildkröte des kanarischen Archipels.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURSCHUTZ -->
+    <section class="section section--alt" id="schutz">
+      <div class="section__head">
+        <span class="section__kicker">Kapitel VI</span>
+        <h2>Verantwortung &amp; Naturschutz</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Die Gewässer zwischen Teneriffa und La Gomera wurden als
+          <strong>Whale Heritage Area</strong> ausgezeichnet – ein internationales
+          Gütesiegel für verantwortungsvolle Begegnungen mit Walen. Zuchtprogramme
+          kämpfen um das Überleben der El-Hierro-Rieseneidechse, und Schutzgebiete
+          sichern die letzten Lorbeerwälder mit ihren endemischen Tauben.
+        </p>
+        <blockquote class="quote">
+          „Jede dieser Arten ist das Ergebnis von Jahrmillionen der Isolation.
+          Was hier verloren geht, kehrt nirgendwo zurück.“
+          <cite>— Horst Wilkens</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__title">Tierwelt der Kanarischen Inseln</p>
+      <p class="footer__by">Eine Website von Horst Wilkens · 2026</p>
+      <p class="footer__sources">
+        Quellen u.&nbsp;a.: Wikipedia, Animalia.bio, Gran Canaria Tourismus,
+        WorldAtlas, Whale Heritage Areas, Goruma.
+      </p>
+      <a class="footer__top" href="#top">↑ Nach oben</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
