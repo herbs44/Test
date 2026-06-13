@@ -1,0 +1,24 @@
+# Netlify-Konfiguration für die statische Website
+# Es ist kein Build-Schritt nötig – die Dateien liegen direkt im Repo-Wurzelverzeichnis.
+
+[build]
+  publish = "."
+  command = ""
+
+# Sicherheits- und Caching-Header
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
